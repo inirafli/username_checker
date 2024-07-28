@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "797357845717",
+    "project_id": "personal-project-51998",
+    "storage_bucket": "personal-project-51998.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:797357845717:android:019ff2cbcfc7da26ac065c",
+        "android_client_info": {
+          "package_name": "com.assignment.username_checker"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDct0hbyj-MpOQCRyxLCExMX0Wr-j91qzc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
