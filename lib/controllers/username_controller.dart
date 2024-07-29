@@ -15,6 +15,13 @@ class UsernameController extends GetxController {
   var showAvailability = false.obs;
 
   final FirestoreHelper _firestoreHelper = FirestoreHelper();
+  final TextEditingController textEditingController = TextEditingController();
+
+  @override
+  void onClose() {
+    textEditingController.dispose();
+    super.onClose();
+  }
 
   void validateUsername(String input) {
     // Check for alphanumeric characters
@@ -31,6 +38,11 @@ class UsernameController extends GetxController {
 
     // Reset showAvailability when the input changes
     showAvailability.value = false;
+  }
+
+  void clearUsername() {
+    textEditingController.clear();
+    validateUsername('');
   }
 
   void checkUsername() async {
@@ -63,7 +75,7 @@ class UsernameController extends GetxController {
   // Method to get the appropriate icon for each validation state
   IconData getValidationIcon(bool isValid, {bool? isEmpty}) {
     if (isEmpty ?? username.isEmpty) {
-      return Icons.circle;
+      return Icons.circle_outlined;
     }
     return isValid ? Icons.check_circle : Icons.cancel;
   }

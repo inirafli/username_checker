@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:username_checker/common/styles.dart';
 import 'package:username_checker/firebase_options.dart';
 import 'package:username_checker/views/username_checker_screen.dart';
 
@@ -19,10 +20,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Username Checker',
-      theme: ThemeData(
-        useMaterial3: false,
-      ),
+      theme: appTheme,
       home: UsernameCheckerScreen(),
     );
   }

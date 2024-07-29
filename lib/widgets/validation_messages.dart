@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../controllers/username_controller.dart';
 
-class ValidationMessageRow extends StatelessWidget {
+class ValidationMessages extends StatelessWidget {
   final String text;
   final bool isValid;
   final Color color;
 
-  const ValidationMessageRow({
+  const ValidationMessages({
     super.key,
     required this.text,
     required this.isValid,
@@ -24,12 +24,12 @@ class ValidationMessageRow extends StatelessWidget {
         Icon(
           controller.getValidationIcon(isValid),
           color: color,
-          size: 16.0,
+          size: 20.0,
         ),
-        const SizedBox(width: 8.0),
+        const SizedBox(width: 10.0),
         Text(
           text,
-          style: TextStyle(color: color),
+          style: TextStyle(fontSize: 14.0, color: color),
         ),
       ],
     );
