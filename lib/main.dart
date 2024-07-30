@@ -5,6 +5,10 @@ import 'package:username_checker/common/styles.dart';
 import 'package:username_checker/firebase_options.dart';
 import 'package:username_checker/views/username_checker_screen.dart';
 
+/// Main entry point of the application.
+///
+/// This function ensures that Flutter is properly initialized,
+/// initializes Firebase with the specified options, and then runs the app.
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
